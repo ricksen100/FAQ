@@ -1,0 +1,41 @@
+DOCUMENTATION(Module 33)
+
+Capstore is an e-commerce web application which allows users to purchase products online. Users can view products from different categories and buy them. The user will be able to see products of similar category, sort them, compare them etc.
+CapStore also allows users to sell their products, they need to register on to the website and need to be authorized by the admin of Capstore. Capstore also has the facility to add third party merchants. 
+
+Capstore will be a website for Capgemini employees. To buy a product, customer has to select the product and add to his cart, customer can add or remove items in cart at anytime. In the end an invoice will be generated, The Customer has options of buying product either through CashOnDelivery or through online payments. Customer has a facility to return the products and can also give a review on them.
+
+Module 33 Description:
+In my module, as soon as the user  adds a product in the cart, the invoice details of the product is displayed. The invoice contains discount offered on the product and an option to add coupons for the product. There is also a list which gives details about the valid coupons that should be applied. If the coupon is applied successfully, then an updated invoice page is displayed, in which the price of the product is calculated in accordance with the coupon discount. If the coupon is not applied, then the price of the product is calculated in accordance with the discount of the product. After the invoice is generated, the page redirects to shipping details.
+
+Database Tables Required:
+1.Product Table
+ p_id(primary key)
+p_name
+p_companyname
+p_image
+p_price
+p_dateofmanufacturing
+p_type
+m_id
+coupon_id
+quantity
+2.Coupons Table
+coupon_id(primary key)
+discount
+expirydt
+m_id
+c_id
+p_type
+
+3.Transaction Table
+p_id
+p_type
+o_no
+T_id(primary key)
+T_type
+T_amount
+
+
+	      
+ 
